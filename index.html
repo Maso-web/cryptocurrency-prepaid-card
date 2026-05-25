@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Prepaid Card | Get Yours in 3 Minutes</title>
-    <!-- Stabilna verzija stilova -->
+    <!-- Najstabilnija globalna verzija stilova koja se nikada ne blokira -->
     <link href="https://cloudflare.com" rel="stylesheet">
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #050505 !important;
@@ -16,17 +17,13 @@
         .neon-cyan-text { color: #00f2ff !important; }
         .neon-purple-text { color: #bc13fe !important; }
         .gold-text { color: #ffd700 !important; }
-        
-        .neon-cyan-glow {
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
-        }
-        
+        .neon-cyan-glow { box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); }
         .glass {
             background: rgba(255, 255, 255, 0.03) !important;
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
-
         .btn-neon {
             background: linear-gradient(90deg, #00f2ff, #bc13fe) !important;
             transition: all 0.3s ease;
@@ -35,11 +32,9 @@
             box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
             transform: translateY(-2px);
         }
-        
         .btn-gold {
             background: #ffd700 !important;
             color: #000000 !important;
-            font-weight: 800;
             transition: all 0.3s ease;
         }
         .btn-gold:hover {
@@ -50,45 +45,45 @@
 </head>
 <body class="bg-black text-white antialiased">
 
-    <!-- Header -->
+    <!-- Header / Navigacija -->
     <header class="fixed w-full z-50 glass py-4 left-0 top-0">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
                 <div class="flex flex-col">
                     <span class="text-2xl font-black tracking-widest text-white">NEXUS</span>
-                    <span class="text-xs uppercase text-gray-500 font-bold">Prepaid Division</span>
+                    <span class="text-xs uppercase text-gray-500 font-bold tracking-wider">Prepaid Division</span>
                 </div>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-semibold tracking-wide uppercase">
-                <a href="#compare" class="text-white hover:text-cyan-400">Compare</a>
-                <a href="#contact" class="text-white hover:text-cyan-400">Contact</a>
+                <a href="#compare" class="text-white hover:text-cyan-400 transition-colors">Compare</a>
+                <a href="#contact" class="text-white hover:text-cyan-400 transition-colors">Contact</a>
             </nav>
-            <a href="#compare" class="btn-neon px-6 py-2 rounded-full font-bold text-xs uppercase text-white inline-block text-center">Compare Cards</a>
+            <a href="#compare" class="btn-neon px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest text-white inline-block text-center">Compare Cards</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Sekcija -->
     <section class="relative min-h-screen flex items-center justify-center pt-32 bg-black">
         <div class="container mx-auto px-6 text-center">
-            <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-bold uppercase text-cyan-400">
+            <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-bold uppercase text-cyan-400 tracking-widest">
                 🚀 Instant Issuing & High Privacy
             </div>
-            <h1 class="text-4xl md:text-7xl font-black mb-8 text-white uppercase tracking-tight">
+            <h1 class="text-4xl md:text-7xl font-black mb-8 text-white uppercase tracking-tight leading-none">
                 Get Your Virtual <br>
                 <span class="neon-cyan-text italic">Crypto</span> Prepaid Card <br>
                 in <span class="gold-text">3 Minutes</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Unlock the power of your crypto. Spend instantly with Apple Pay & Google Pay. 
                 No credit checks, no long waits—just pure financial freedom.
             </p>
             <div class="flex justify-center">
-                <a href="#compare" class="btn-gold px-12 py-5 rounded-2xl text-xl neon-cyan-glow font-bold uppercase block text-center">Compare Cards</a>
+                <a href="#compare" class="btn-gold px-12 py-5 rounded-2xl text-xl neon-cyan-glow font-extrabold uppercase block text-center">Compare Cards</a>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Table -->
+    <!-- Tablica s karticama -->
     <section id="compare" class="py-24 bg-black">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -100,33 +95,33 @@
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="border-b border-white/10 bg-white/5">
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs">Card Provider</th>
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs text-center">Issue Time</th>
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs">Key Benefits</th>
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs text-right">Action</th>
+                            <th class="p-6 text-gray-400 font-bold uppercase text-xs tracking-wider">Card Provider</th>
+                            <th class="p-6 text-gray-400 font-bold uppercase text-xs text-center tracking-wider">Issue Time</th>
+                            <th class="p-6 text-gray-400 font-bold uppercase text-xs tracking-wider">Key Benefits</th>
+                            <th class="p-6 text-gray-400 font-bold uppercase text-xs text-right tracking-wider">Action</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-white/10">
-                        <!-- RedotPay -->
-                        <tr>
-                            <td class="p-6 text-white font-bold">RedotPay (KYC)</td>
-                            <td class="p-6 text-center text-gray-300">Instant</td>
+                        <!-- RedotPay (Aktivna s vašim affiliate linkom) -->
+                        <tr class="transition-colors hover:bg-white/5">
+                            <td class="p-6 text-white font-bold text-lg">RedotPay (KYC)</td>
+                            <td class="p-6 text-center text-gray-300 font-medium">Instant</td>
                             <td class="p-6 text-gray-300">High limits, Global ATM withdrawals, Apple Pay & Google Pay support</td>
-                            <td class="p-6 text-right"><a href="https://redotpay.com" target="_blank" class="text-cyan-400 hover:underline font-bold">Get Card</a></td>
+                            <td class="p-6 text-right"><a href="https://redotpay.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 underline font-bold tracking-wide">Get Card</a></td>
                         </tr>
                         <!-- Druga kartica -->
-                        <tr>
-                            <td class="p-6 text-gray-500 font-bold">Card 2 (No KYC)</td>
-                            <td class="p-6 text-center text-gray-500">10 Minutes</td>
+                        <tr class="transition-colors hover:bg-white/5">
+                            <td class="p-6 text-gray-500 font-bold text-lg">Card 2 (No KYC)</td>
+                            <td class="p-6 text-center text-gray-500 font-medium">10 Minutes</td>
                             <td class="p-6 text-gray-500">High privacy, No identity checks, Virtual option only</td>
-                            <td class="p-6 text-right"><span class="text-gray-600">Coming Soon</span></td>
+                            <td class="p-6 text-right"><span class="text-gray-600 font-semibold">Coming Soon</span></td>
                         </tr>
                         <!-- Treća kartica -->
-                        <tr>
-                            <td class="p-6 text-gray-500 font-bold">Card 3 (VIP)</td>
-                            <td class="p-6 text-center text-gray-500">24 Hours</td>
+                        <tr class="transition-colors hover:bg-white/5">
+                            <td class="p-6 text-gray-500 font-bold text-lg">Card 3 (VIP)</td>
+                            <td class="p-6 text-center text-gray-500 font-medium">24 Hours</td>
                             <td class="p-6 text-gray-500">Premium cashback rewards, Dedicated support, Physical metal card</td>
-                            <td class="p-6 text-right"><span class="text-gray-600">Coming Soon</span></td>
+                            <td class="p-6 text-right"><span class="text-gray-600 font-semibold">Coming Soon</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -134,7 +129,7 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Kontakt Forma -->
     <section id="contact" class="py-24 bg-black border-t border-white/10">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-16">
@@ -146,29 +141,17 @@
                 <form class="space-y-6" onsubmit="event.preventDefault();">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs uppercase text-gray-400 font-bold mb-2">Your Name</label>
-                            <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400" placeholder="John Doe">
+                            <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Your Name</label>
+                            <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="John Doe">
                         </div>
                         <div>
-                            <label class="block text-xs uppercase text-gray-400 font-bold mb-2">Email Address</label>
-                            <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400" placeholder="john@example.com">
+                            <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Email Address</label>
+                            <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="john@example.com">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs uppercase text-gray-400 font-bold mb-2">Subject</label>
-                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400" placeholder="Partnership inquiry">
+                        <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Subject</label>
+                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Partnership inquiry">
                     </div>
                     <div>
-                        <label class="block text-xs uppercase text-gray-400 font-bold mb-2">Message</label>
-                        <textarea rows="5" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 resize-none" placeholder="Your message here..."></textarea>
-                    </div>
-                    <div class="text-right">
-                        <button type="submit" class="btn-gold px-10 py-4 rounded-xl w-full md:w-auto text-base tracking-wide uppercase font-bold">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
+                        <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Message</label>
