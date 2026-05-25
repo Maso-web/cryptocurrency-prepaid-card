@@ -4,124 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Prepaid Card | Get Yours in 3 Minutes</title>
-    <!-- Najstabilnija globalna verzija stilova koja se nikada ne blokira -->
-    <link href="https://cloudflare.com" rel="stylesheet">
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
+        /* Ugrađeni osnovni stilovi da izbjegnemo vanjske blokade */
+        html { scroll-behavior: smooth; box-sizing: border-box; }
+        *, *:before, *:after { box-sizing: inherit; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #050505 !important;
             color: #ffffff !important;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .flex { display: flex; }
+        .justify-between { justify-content: space-between; }
+        .items-center { align-items: center; }
+        .text-center { text-center: center; text-align: center; }
+        .text-right { text-align: right; }
+        .hidden { display: none; }
+        @media (min-width: 768px) { .hidden.md\:flex { display: flex; } }
+        
+        /* Boje i efekti */
         .neon-cyan-text { color: #00f2ff !important; }
         .neon-purple-text { color: #bc13fe !important; }
         .gold-text { color: #ffd700 !important; }
-        .neon-cyan-glow { box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); }
+        .text-gray-400 { color: #9ca3af !important; }
+        .text-gray-500 { color: #6b7280 !important; }
+        
         .glass {
             background: rgba(255, 255, 255, 0.03) !important;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
+        
+        .fixed { position: fixed; }
+        .w-full { width: 100%; }
+        .z-50 { z-index: 50; }
+        .py-4 { padding-top: 16px; padding-bottom: 16px; }
+        .pt-32 { padding-top: 128px; }
+        .py-24 { padding-top: 96px; padding-bottom: 96px; }
+        
+        /* Gumbi */
         .btn-neon {
             background: linear-gradient(90deg, #00f2ff, #bc13fe) !important;
-            transition: all 0.3s ease;
-        }
-        .btn-neon:hover {
-            box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
-            transform: translateY(-2px);
+            color: #ffffff !important;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            display: inline-block;
         }
         .btn-gold {
             background: #ffd700 !important;
             color: #000000 !important;
-            transition: all 0.3s ease;
+            padding: 20px 48px;
+            border-radius: 16px;
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
         }
-        .btn-gold:hover {
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
-            transform: translateY(-2px);
+        
+        /* Tablica */
+        .overflow-x-auto { overflow-x: auto; }
+        .rounded-3xl { border-radius: 24px; }
+        .border { border: 1px solid rgba(255, 255, 255, 0.1); }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th { padding: 24px; color: #9ca3af; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255,255,255,0.02); }
+        td { padding: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        tr:hover { background: rgba(255, 255, 255, 0.03); }
+        
+        /* Forma */
+        .max-w-4xl { max-w: 896px; margin: 0 auto; }
+        .space-y-6 > * + * { margin-top: 24px; }
+        .grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+        @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+        input, textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px 20px;
+            color: #ffffff;
+            font-size: 16px;
         }
+        input:focus, textarea:focus { outline: none; border-color: #00f2ff; }
+        label { display: block; font-size: 12px; text-transform: uppercase; color: #9ca3af; font-weight: bold; margin-bottom: 8px; letter-spacing: 1px; }
     </style>
 </head>
-<body class="bg-black text-white antialiased">
+<body>
 
-    <!-- Header / Navigacija -->
-    <header class="fixed w-full z-50 glass py-4 left-0 top-0">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <div class="flex flex-col">
-                    <span class="text-2xl font-black tracking-widest text-white">NEXUS</span>
-                    <span class="text-xs uppercase text-gray-500 font-bold tracking-wider">Prepaid Division</span>
-                </div>
+    <!-- Header -->
+    <header class="fixed w-full z-50 glass py-4">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="font-size: 24px; font-weight: 900; letter-spacing: 2px; color: #ffffff; margin: 0;">NEXUS</span>
+                <span class="text-gray-500" style="font-size: 10px; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; margin-top: 2px;">Prepaid Division</span>
             </a>
-            <nav class="hidden md:flex space-x-10 text-sm font-semibold tracking-wide uppercase">
-                <a href="#compare" class="text-white hover:text-cyan-400 transition-colors">Compare</a>
-                <a href="#contact" class="text-white hover:text-cyan-400 transition-colors">Contact</a>
+            <nav class="hidden md:flex" style="gap: 40px;">
+                <a href="#compare" style="color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase;">Compare</a>
+                <a href="#contact" style="color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase;">Contact</a>
             </nav>
-            <a href="#compare" class="btn-neon px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest text-white inline-block text-center">Compare Cards</a>
+            <a href="#compare" class="btn-neon">Compare Cards</a>
         </div>
     </header>
 
-    <!-- Hero Sekcija -->
-    <section class="relative min-h-screen flex items-center justify-center pt-32 bg-black">
-        <div class="container mx-auto px-6 text-center">
-            <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-bold uppercase text-cyan-400 tracking-widest">
+    <!-- Hero Section -->
+    <section class="pt-32 text-center" style="min-h: 100vh; display: flex; align-items: center; background: #050505;">
+        <div class="container">
+            <div class="glass" style="display: inline-block; padding: 6px 16px; border-radius: 9999px; font-size: 12px; font-weight: bold; text-transform: uppercase; color: #00f2ff; letter-spacing: 1px; margin-bottom: 24px;">
                 🚀 Instant Issuing & High Privacy
             </div>
-            <h1 class="text-4xl md:text-7xl font-black mb-8 text-white uppercase tracking-tight leading-none">
+            <h1 style="font-size: 56px; font-weight: 900; text-transform: uppercase; margin: 0 0 32px 0; line-height: 1.1; letter-spacing: -1px;">
                 Get Your Virtual <br>
-                <span class="neon-cyan-text italic">Crypto</span> Prepaid Card <br>
+                <span class="neon-cyan-text" style="font-style: italic;">Crypto</span> Prepaid Card <br>
                 in <span class="gold-text">3 Minutes</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-gray-400" style="font-size: 20px; max-w: 768px; margin: 0 auto 48px auto; line-height: 1.6;">
                 Unlock the power of your crypto. Spend instantly with Apple Pay & Google Pay. 
                 No credit checks, no long waits—just pure financial freedom.
             </p>
-            <div class="flex justify-center">
-                <a href="#compare" class="btn-gold px-12 py-5 rounded-2xl text-xl neon-cyan-glow font-extrabold uppercase block text-center">Compare Cards</a>
+            <div>
+                <a href="#compare" class="btn-gold">Compare Cards</a>
             </div>
         </div>
     </section>
 
-    <!-- Tablica s karticama -->
-    <section id="compare" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 text-white uppercase">Compare <span class="neon-purple-text">Elite Cards</span></h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">We've vetted the best providers so you don't have to. Choose your preferred level of privacy and rewards.</p>
+    <!-- Tablica -->
+    <section id="compare" class="py-24" style="background: #050505;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 64px;">
+                <h2 style="font-size: 48px; font-weight: 900; text-transform: uppercase; margin: 0 0 24px 0;">Compare <span class="neon-purple-text">Elite Cards</span></h2>
+                <p class="text-gray-400" style="font-size: 18px; max-w: 672px; margin: 0 auto;">We've vetted the best providers so you don't have to. Choose your preferred level of privacy and rewards.</p>
             </div>
 
-            <div class="overflow-x-auto rounded-3xl border border-white/10 glass">
-                <table class="w-full text-left border-collapse">
+            <div class="overflow-x-auto rounded-3xl border glass">
+                <table>
                     <thead>
-                        <tr class="border-b border-white/10 bg-white/5">
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs tracking-wider">Card Provider</th>
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs text-center tracking-wider">Issue Time</th>
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs tracking-wider">Key Benefits</th>
-                            <th class="p-6 text-gray-400 font-bold uppercase text-xs text-right tracking-wider">Action</th>
+                        <tr>
+                            <th>Card Provider</th>
+                            <th style="text-align: center;">Issue Time</th>
+                            <th>Key Benefits</th>
+                            <th style="text-align: right;">Action</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-white/10">
-                        <!-- RedotPay (Aktivna s vašim affiliate linkom) -->
-                        <tr class="transition-colors hover:bg-white/5">
-                            <td class="p-6 text-white font-bold text-lg">RedotPay (KYC)</td>
-                            <td class="p-6 text-center text-gray-300 font-medium">Instant</td>
-                            <td class="p-6 text-gray-300">High limits, Global ATM withdrawals, Apple Pay & Google Pay support</td>
-                            <td class="p-6 text-right"><a href="https://redotpay.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 underline font-bold tracking-wide">Get Card</a></td>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold; font-size: 18px; color: #ffffff;">RedotPay (KYC)</td>
+                            <td style="text-align: center; color: #d1d5db;">Instant</td>
+                            <td style="color: #d1d5db;">High limits, Global ATM withdrawals, Apple Pay & Google Pay support</td>
+                            <td style="text-align: right;"><a href="https://redotpay.com" target="_blank" class="neon-cyan-text" style="font-weight: bold; text-decoration: underline;">Get Card</a></td>
                         </tr>
-                        <!-- Druga kartica -->
-                        <tr class="transition-colors hover:bg-white/5">
-                            <td class="p-6 text-gray-500 font-bold text-lg">Card 2 (No KYC)</td>
-                            <td class="p-6 text-center text-gray-500 font-medium">10 Minutes</td>
-                            <td class="p-6 text-gray-500">High privacy, No identity checks, Virtual option only</td>
-                            <td class="p-6 text-right"><span class="text-gray-600 font-semibold">Coming Soon</span></td>
+                        <tr>
+                            <td style="font-weight: bold; font-size: 18px; color: #6b7280;">Card 2 (No KYC)</td>
+                            <td style="text-align: center; color: #6b7280;">10 Minutes</td>
+                            <td style="color: #6b7280;">High privacy, No identity checks, Virtual option only</td>
+                            <td style="text-align: right; color: #4b5563; font-weight: bold;">Coming Soon</td>
                         </tr>
-                        <!-- Treća kartica -->
-                        <tr class="transition-colors hover:bg-white/5">
-                            <td class="p-6 text-gray-500 font-bold text-lg">Card 3 (VIP)</td>
-                            <td class="p-6 text-center text-gray-500 font-medium">24 Hours</td>
-                            <td class="p-6 text-gray-500">Premium cashback rewards, Dedicated support, Physical metal card</td>
-                            <td class="p-6 text-right"><span class="text-gray-600 font-semibold">Coming Soon</span></td>
+                        <tr>
+                            <td style="font-weight: bold; font-size: 18px; color: #6b7280;">Card 3 (VIP)</td>
+                            <td style="text-align: center; color: #6b7280;">24 Hours</td>
+                            <td style="color: #6b7280;">Premium cashback rewards, Dedicated support, Physical metal card</td>
+                            <td style="text-align: right; color: #4b5563; font-weight: bold;">Coming Soon</td>
                         </tr>
                     </tbody>
                 </table>
@@ -130,28 +182,7 @@
     </section>
 
     <!-- Kontakt Forma -->
-    <section id="contact" class="py-24 bg-black border-t border-white/10">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 text-white uppercase">Get in <span class="neon-cyan-text">Touch</span></h2>
-                <p class="text-gray-400 text-lg">Have questions about our division or custom solutions? Send us a message.</p>
-            </div>
-            
-            <div class="glass p-8 md:p-12 rounded-3xl border border-white/10">
-                <form class="space-y-6" onsubmit="event.preventDefault();">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Your Name</label>
-                            <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Email Address</label>
-                            <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="john@example.com">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Subject</label>
-                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Partnership inquiry">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase text-gray-400 font-bold mb-2 tracking-widest">Message</label>
+    <section id="contact" class="py-24" style="background: #050505; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container max-w-4xl">
+            <div class="text-center" style="margin-bottom: 64px;">
+                <h2 style="font-size: 48px; font-weight: 900; text-transform: uppercase; margin: 0 0 24px 0;">Get in <span class="neon-cyan-text">Touch</span></h2>
