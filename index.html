@@ -1,19 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth; box-sizing: border-box;">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Prepaid Card | Get Yours in 3 Minutes</title>
+    <!-- Stabilna verzija stilova koja se nikada ne blokira -->
+    <link href="https://cloudflare.com" rel="stylesheet">
     <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505 !important;
+            color: #ffffff !important;
+        }
+        .neon-cyan-text { color: #00f2ff !important; }
+        .neon-purple-text { color: #bc13fe !important; }
+        .gold-text { color: #ffd700 !important; }
+        
+        .neon-cyan-glow {
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.9));
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-neon {
+            background: linear-gradient(90deg, #00f2ff, #bc13fe) !important;
+            transition: all 0.3s ease;
+        }
+        .btn-neon:hover {
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        .btn-gold {
+            background: #ffd700 !important;
+            color: #000000 !important;
+            font-weight: 800;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
-<body style="font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; padding: 0; overflow-x: hidden; -webkit-font-smoothing: antialiased;">
+<body class="overflow-x-hidden antialiased bg-black text-white">
 
     <!-- Header -->
-    <header style="position: fixed; width: 100%; top: 0; left: 0; z-index: 50; background: rgba(5, 5, 5, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 16px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+    <header class="fixed w-full z-50 glass py-4 left-0 top-0">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group" style="text-decoration: none;">
                 <!-- Nexus Network Logo -->
-                <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org" style="margin-right: 12px;">
+                <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
                     <path d="M50 50L85 15" stroke="#FFD700" stroke-width="5" stroke-linecap="round" />
                     <path d="M50 50L80 80" stroke="#C0C0C0" stroke-width="5" stroke-linecap="round" />
                     <path d="M50 50L15 65" stroke="#C0C0C0" stroke-width="5" stroke-linecap="round" />
@@ -24,80 +75,83 @@
                     <circle cx="15" cy="65" r="4" fill="#00f2ff" />
                     <circle cx="20" cy="25" r="4" fill="#00f2ff" />
                 </svg>
-                <div style="display: flex; flex-direction: column;">
-                    <span style="font-size: 24px; font-weight: 900; letter-spacing: 3px; color: #ffffff; line-height: 1;">NEXUS</span>
-                    <span style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #6b7280; font-weight: bold; margin-top: 4px;">Prepaid Division</span>
+                <div class="flex flex-col leading-none">
+                    <span class="text-2xl font-black tracking-widest text-white">NEXUS</span>
+                    <span class="text-xs uppercase text-gray-500 font-bold mt-1">Prepaid Division</span>
                 </div>
             </a>
-            <nav style="display: flex; gap: 32px;">
-                <a href="#compare" style="color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Compare</a>
-                <a href="#faq" style="color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">FAQ</a>
-                <a href="#contact" style="color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Contact</a>
+            <nav class="hidden md:flex space-x-10 text-sm font-semibold tracking-wide uppercase">
+                <a href="#compare" class="text-white hover:text-cyan-400 transition-colors">Compare</a>
+                <a href="#features" class="text-white hover:text-cyan-400 transition-colors">Features</a>
+                <a href="#faq" class="text-white hover:text-cyan-400 transition-colors">FAQ</a>
+                <a href="#contact" class="text-white hover:text-cyan-400 transition-colors">Contact</a>
             </nav>
-            <a href="#compare" style="background: linear-gradient(90deg, #00f2ff, #bc13fe); color: #ffffff; padding: 10px 24px; border-radius: 9999px; font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; text-decoration: none;">Compare Cards</a>
+            <a href="#compare" class="btn-neon px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest text-white inline-block text-center" style="text-decoration: none;">Compare Cards</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 120px; background: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.9)); text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-            <div style="display: inline-block; padding: 6px 18px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px; font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #00f2ff; margin-bottom: 24px;">
+    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-bg">
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-bold tracking-widest uppercase text-cyan-400">
                 🚀 Instant Issuing & High Privacy
             </div>
-            <h1 style="font-size: 64px; font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 0 0 32px 0; text-transform: uppercase;">
+            <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-none text-white uppercase">
                 Get Your Virtual <br>
-                <span style="color: #00f2ff; font-style: italic;">Crypto</span> Prepaid Card <br>
-                in <span style="color: #ffd700;">3 Minutes</span>
+                <span class="neon-cyan-text italic">Crypto</span> Prepaid Card <br>
+                in <span class="gold-text">3 Minutes</span>
             </h1>
-            <p style="font-size: 20px; color: #9ca3af; max-w: 768px; margin: 0 auto 48px auto; line-height: 1.6;">
+            <p class="text-lg md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Unlock the power of your crypto. Spend instantly with Apple Pay & Google Pay. 
                 No credit checks, no long waits—just pure financial freedom.
             </p>
-            <div>
-                <a href="#compare" style="background: #ffd700; color: #000000; padding: 18px 48px; border-radius: 16px; font-size: 18px; font-weight: 800; text-transform: uppercase; text-decoration: none; box-shadow: 0 0 20px rgba(0, 242, 255, 0.3); display: inline-block;">Compare Cards</a>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <a href="#compare" class="btn-gold px-12 py-5 rounded-2xl text-xl neon-cyan-glow w-full md:w-auto text-center block font-bold uppercase" style="text-decoration: none;">Compare Cards</a>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Table -->
-    <section id="compare" style="padding: 96px 0; background: #050505;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-            <div style="text-align: center; margin-bottom: 64px;">
-                <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 20px 0; text-transform: uppercase;">Compare <span style="color: #bc13fe;">Elite Cards</span></h2>
-                <p style="color: #9ca3af; font-size: 18px; max-w: 672px; margin: 0 auto;">We've vetted the best providers so you don't have to. Choose your preferred level of privacy and rewards.</p>
+    <!-- Comparison Table Section -->
+    <section id="compare" class="py-32 bg-[#050505]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 text-white uppercase">Compare <span class="neon-purple-text">Elite Cards</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">We've vetted the best providers so you don't have to. Choose your preferred level of privacy and rewards.</p>
             </div>
 
-            <div style="overflow-x: auto; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px);">
-                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <div class="overflow-x-auto rounded-3xl border border-white/10 shadow-2xl">
+                <table class="w-full text-left border-collapse glass">
                     <thead>
-                        <tr style="background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <th style="padding: 24px; color: #6b7280; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Card Provider</th>
-                            <th style="padding: 24px; color: #6b7280; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; text-align: center;">Issue Time</th>
-                            <th style="padding: 24px; color: #6b7280; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Key Benefits</th>
-                            <th style="padding: 24px; color: #6b7280; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; text-align: right;">Action</th>
+                        <tr class="bg-white/5">
+                            <th class="p-8 text-gray-500 font-bold uppercase tracking-widest text-xs">Card Provider</th>
+                            <th class="p-8 text-gray-500 font-bold uppercase tracking-widest text-xs text-center">Issue Time</th>
+                            <th class="p-8 text-gray-500 font-bold uppercase tracking-widest text-xs">Key Benefits</th>
+                            <th class="p-8 text-gray-500 font-bold uppercase tracking-widest text-xs text-right">Action</th>
                         </tr>
                     </thead>
-                    <tbody style="color: #d1d5db;">
+                    <tbody class="divide-y divide-white/10">
                         <!-- RedotPay -->
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 24px; font-weight: bold; color: #ffffff; font-size: 18px;">RedotPay (KYC)</td>
-                            <td style="padding: 24px; text-align: center; color: #ffffff;">Instant</td>
-                            <td style="padding: 24px; color: #9ca3af;">High limits, Global ATM withdrawals, Apple Pay & Google Pay support</td>
-                            <td style="padding: 24px; text-align: right;"><a href="https://redotpay.com" target="_blank" style="color: #00f2ff; text-decoration: underline; font-weight: bold; tracking-wide: 1px;">Get Card</a></td>
+                        <tr class="hover:bg-white/[0.02] transition-colors group">
+                            <td class="p-8 text-white font-bold text-lg">RedotPay (KYC)</td>
+                            <td class="p-8 text-center text-gray-300">Instant</td>
+                            <td class="p-8 text-gray-300">High limits, Global ATM withdrawals, Apple Pay & Google Pay support</td>
+                            <td class="p-8 text-right">
+                                <a href="https://redotpay.com" target="_blank" class="text-cyan-400 hover:underline font-bold">Get Card</a>
+                            </td>
                         </tr>
-                        <!-- Druga kartica -->
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 24px; font-weight: bold; color: #4b5563; font-size: 18px;">CARD 2 (NO KYC)</td>
-                            <td style="padding: 24px; text-align: center; color: #4b5563;">10 Minutes</td>
-                            <td style="padding: 24px; color: #4b5563;">High privacy, No identity checks, Virtual option only</td>
-                            <td style="padding: 24px; text-align: right; color: #4b5563; font-weight: bold;">Coming Soon</td>
+                        <!-- CARD 2 -->
+                        <tr class="hover:bg-white/[0.02] transition-colors group">
+                            <td class="p-8 text-gray-400 font-bold text-lg">CARD 2 (NO KYC)</td>
+                            <td class="p-8 text-center text-gray-400">10 Minutes</td>
+                            <td class="p-8 text-gray-400">High privacy, No identity checks, Virtual option only</td>
+                            <td class="p-8 text-right"><span class="text-gray-600 font-bold">Coming Soon</span></td>
                         </tr>
-                        <!-- Treća kartica -->
-                        <tr>
-                            <td style="padding: 24px; font-weight: bold; color: #4b5563; font-size: 18px;">CARD 3 (VIP)</td>
-                            <td style="padding: 24px; text-align: center; color: #4b5563;">24 Hours</td>
-                            <td style="padding: 24px; color: #4b5563;">Premium cashback rewards, Dedicated support, Physical metal card</td>
-                            <td style="padding: 24px; text-align: right; color: #4b5563; font-weight: bold;">Coming Soon</td>
+                        <!-- CARD 3 -->
+                        <tr class="hover:bg-white/[0.02] transition-colors group">
+                            <td class="p-8 text-gray-400 font-bold text-lg">CARD 3 (VIP)</td>
+                            <td class="p-8 text-center text-gray-400">24 Hours</td>
+                            <td class="p-8 text-gray-400">Premium cashback rewards, Dedicated support, Physical metal card</td>
+                            <td class="p-8 text-right"><span class="text-gray-600 font-bold">Coming Soon</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -106,10 +160,12 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" style="padding: 96px 0; background: #050505; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-        <div style="max-width: 768px; margin: 0 auto; padding: 0 24px;">
-            <div style="text-align: center; margin-bottom: 64px;">
-                <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 20px 0; text-transform: uppercase;">Frequently Asked <span style="color: #ffd700;">Questions</span></h2>
-                <p style="color: #9ca3af; font-size: 18px;">Everything you need to know about Nexus Prepaid cards.</p>
+    <section id="faq" class="py-32 bg-[#050505] border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 text-white uppercase">Frequently Asked <span class="gold-text">Questions</span></h2>
+                <p class="text-gray-400 text-lg">Everything you need to know about Nexus Prepaid cards.</p>
             </div>
-            <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div class="space-y-6">
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold mb-3 text-white">How long does it take to get a virtual card?</h3>
