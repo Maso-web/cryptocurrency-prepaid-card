@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,9 +54,14 @@
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
             transform: translateY(-2px);
         }
+        
+        .card-hover:hover {
+            border-color: rgba(0, 242, 255, 0.5);
+            background: rgba(0, 242, 255, 0.02);
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="overflow-y-auto overflow-x-hidden antialiased bg-[#050505] text-white">
 
     <!-- Header -->
     <header class="fixed w-full z-50 glass py-4">
@@ -79,22 +84,21 @@
                 </div>
             </a>
             <nav class="hidden md:flex space-x-10 text-sm font-semibold tracking-wide uppercase">
-                <a href="#compare" class="hover:text-cyan-400 transition-colors">Compare</a>
-                <a href="#features" class="hover:text-cyan-400 transition-colors">Features</a>
-                <a href="#faq" class="hover:text-cyan-400 transition-colors">FAQ</a>
-                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                <a href="#compare" class="text-white hover:text-cyan-400 transition-colors">Compare</a>
+                <a href="#faq" class="text-white hover:text-cyan-400 transition-colors">FAQ</a>
+                <a href="#contact" class="text-white hover:text-cyan-400 transition-colors">Contact</a>
             </nav>
-            <a href="#compare" class="btn-neon px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">Compare Cards</a>
+            <a href="#compare" class="btn-neon px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest text-white">Compare Cards</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-bg">
+    <section class="relative flex items-center justify-center pt-40 pb-20 hero-bg">
         <div class="container mx-auto px-6 relative z-10 text-center">
             <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-bold tracking-widest uppercase text-cyan-400">
                 🚀 Instant Issuing & High Privacy
             </div>
-            <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-none">
+            <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-none text-white uppercase">
                 Get Your Virtual <br>
                 <span class="neon-cyan-text italic">Crypto</span> Prepaid Card <br>
                 in <span class="gold-text">3 Minutes</span>
@@ -104,16 +108,16 @@
                 No credit checks, no long waits—just pure financial freedom.
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                <a href="#compare" class="btn-gold px-12 py-5 rounded-2xl text-xl neon-cyan-glow w-full md:w-auto">Compare Cards</a>
+                <a href="#compare" class="btn-gold px-12 py-5 rounded-2xl text-xl neon-cyan-glow w-full md:w-auto text-center block font-bold uppercase">Compare Cards</a>
             </div>
         </div>
     </section>
 
     <!-- Comparison Table Section -->
-    <section id="compare" class="py-32 bg-[#050505]">
+    <section id="compare" class="py-24 bg-[#050505]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-6xl font-black mb-6">Compare <span class="neon-purple-text">Elite Cards</span></h2>
+                <h2 class="text-4xl md:text-6xl font-black mb-6 text-white uppercase">Compare <span class="neon-purple-text">Elite Cards</span></h2>
                 <p class="text-gray-400 text-lg max-w-2xl mx-auto">We've vetted the best providers so you don't have to. Choose your preferred level of privacy and rewards.</p>
             </div>
 
@@ -130,14 +134,7 @@
                     <tbody class="divide-y divide-white/10">
                         <!-- RedotPay -->
                         <tr class="hover:bg-white/[0.02] transition-colors group">
-                            <td class="p-8">
-                                <div class="flex items-center space-x-6">
-                                    <div class="relative">
-                                        <img src="assets/redotpay-logo.png" alt="RedotPay" class="w-16 h-16 rounded-2xl shadow-lg">
-                                        <div class="absolute -bottom-2 -right-2 bg-red-600 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">KYC</div>
-                                    </div>
-                                </div>
-                            </td>
+                            <td class="p-8 text-white font-bold text-lg">RedotPay (KYC)</td>
                             <td class="p-8 text-center text-gray-300">Instant</td>
                             <td class="p-8 text-gray-300">High limits, Global ATM withdrawals, Apple Pay & Google Pay support</td>
                             <td class="p-8 text-right">
@@ -146,24 +143,33 @@
                         </tr>
                         <!-- CARD 2 -->
                         <tr class="hover:bg-white/[0.02] transition-colors group">
-                            <td class="p-8">
-                                <div class="flex items-center space-x-6">
-                                    <div class="relative">
-                                        <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 font-bold">CARD 2</div>
-                                        <div class="absolute -bottom-2 -right-2 bg-gray-600 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">NO KYC</div>
-                                    </div>
-                                </div>
-                            </td>
+                            <td class="p-8 text-gray-400 font-bold text-lg">CARD 2 (NO KYC)</td>
                             <td class="p-8 text-center text-gray-400">10 Minutes</td>
                             <td class="p-8 text-gray-400">High privacy, No identity checks, Virtual option only</td>
                             <td class="p-8 text-right"><span class="text-gray-600 font-bold">Coming Soon</span></td>
                         </tr>
                         <!-- CARD 3 -->
                         <tr class="hover:bg-white/[0.02] transition-colors group">
-                            <td class="p-8">
-                                <div class="flex items-center space-x-6">
-                                    <div class="relative">
-                                        <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 font-bold">CARD 3</div>
-                                        <div class="absolute -bottom-2 -right-2 bg-yellow-600 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">VIP</div>
-                                    </div>
-                                </div>
+                            <td class="p-8 text-gray-400 font-bold text-lg">CARD 3 (VIP)</td>
+                            <td class="p-8 text-center text-gray-400">24 Hours</td>
+                            <td class="p-8 text-gray-400">Premium cashback rewards, Dedicated support, Physical metal card</td>
+                            <td class="p-8 text-right"><span class="text-gray-600 font-bold">Coming Soon</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-[#050505] border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 text-white uppercase">Frequently Asked <span class="gold-text">Questions</span></h2>
+                <p class="text-gray-400 text-lg">Everything you need to know about Nexus Prepaid cards.</p>
+            </div>
+            <div class="space-y-6">
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold mb-3 text-white">How long does it take to get a virtual card?</h3>
+                    <p class="text-gray-400">The issuing process takes less than 3 minutes. Once confirmed, your card is immediately ready for Apple Pay and Google Pay.</p>
+                </div>
